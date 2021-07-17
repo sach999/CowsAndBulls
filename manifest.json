@@ -1,0 +1,26 @@
+{
+    "short_name": "CowsAndBulls",
+    "name": "Cows And Bulls",
+    "icons": [
+        {
+            "src": "imgs/CABLogo.png",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "imgs/CABLogo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "imgs/CABLogo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#2a363b",
+    "background_color": "#fff1f3"
+}

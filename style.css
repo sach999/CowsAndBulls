@@ -1,0 +1,422 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+a{
+	text-decoration: none;
+	opacity: 0.75;
+	color: #fff;
+}
+
+/* header{
+    font-family: 'Quicksand', sans-serif; 
+    background: #2a363b;
+    color: rgb(255, 255, 255);
+} */
+header{
+    position: absolute;
+    font-family: 'Quicksand', sans-serif; 
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 100px 0; 
+    opacity: 0.2;
+	animation: 1s fadein 0.5s forwards;
+    color: #fff;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+
+
+nav{
+    list-style: none;
+}
+
+header nav{
+	display: flex;
+	margin-right: -15px;
+}
+
+header nav li{
+    margin: 0 15px;
+}
+
+@media (max-width:800px){
+	header{
+		padding: 20px 50px;
+		flex-direction: column;
+	}
+
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+
+
+body{
+    /* width: 100vh; */
+    min-height: 100vh;
+    /* margin: 0;
+    padding: 0; */
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+
+.wrapper{
+    background: #2a363b;
+    color:white;
+    /* position: relative; */
+    min-height: 45%;
+    justify-content: center;
+    text-align: center;
+    padding: 75px 75px 60px 75px;
+}
+
+/* .wrapper .background-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background-color: #2a363b;
+} */
+
+.header{
+    font-family: 'Saira Stencil One', sans-serif;
+    opacity: 0;
+    animation: 1s fadein 0.5s forwards;
+}
+
+.header h1{
+    padding: 10px 10px;
+    
+}
+
+.header h2{
+    padding-bottom: 10px;
+    opacity: 0;
+    animation : 1s faddee 1.2s forwards;
+}
+
+@keyframes faddee{
+    100%{
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadein{
+	100%{
+		opacity: 1;
+	}
+}
+
+@media (max-width: 372px){
+    header nav{
+        padding-bottom : 25px;
+    }
+    .header h1{
+        padding-top: 50px;
+    }
+}
+
+label{
+    display: block;
+    /* margin: 0.25em 0; */
+    font-weight: bold;
+    color: tomato;
+    font-family:  'Saira Stencil One', sans-serif;
+}
+
+input{
+    border: 1px solid #ccc;
+	box-shadow: inset 0 1px 3px #ddd;
+	border-radius: 7px;
+	vertical-align: middle;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+	padding: 0.5em 0.6em;
+    margin-bottom: 0.5em;
+    outline: none;
+}
+
+
+/* bottom half */
+.guess{
+    /* display:flex; */
+    justify-content: center;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.guess label{
+    padding-top: 10px;
+    color: #2a363b;
+}
+
+
+/* list styling */
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    /* max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center; */
+}
+ol li {
+    counter-increment: my-awesome-counter;
+    padding: 10px 8px;
+
+}
+ol li::before {
+    content: counter(my-awesome-counter) ". ";
+    color: tomato;
+    font-weight: bold;
+}
+
+ol li:hover{
+    /* background: #424242; */
+    /* opacity: 0.3; */
+    padding-left: 5px;
+}
+
+ol li span {
+    padding: 10px 10px;
+}
+
+
+.gameOver, .ans{
+    padding: 5px 5px;
+    font-family: 'Saira Stencil One', sans-serif;
+    font-weight: 100;
+}
+
+/* button styling */
+.btn{
+    padding: 20px 20px;
+    font-size: 15px;
+    font-family: 'Saira Stencil One', sans-serif;
+    font-weight: 100;
+    color: white;
+    background: tomato;
+    outline : none;
+    border : none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 6px #efa424;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.btn:hover {
+    box-shadow: 0 4px #efa424;
+    top: 2px;
+}
+
+.btn:active {
+    box-shadow: none;
+    top: 6px;
+}
+
+.wrd ,.cows, .bulls {
+    font-weight: 900;
+}
+
+.cows {
+    color: #2e7d32;
+}
+
+.bulls {
+    color: #0277bd;
+}
+
+hr {
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.container {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    padding: 30px 30px;
+    display: flex;
+    max-width: 1000px;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: 1s fadein 1.2s forwards;
+}
+
+.container h2{
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.container p, h4 {
+    padding: 10px;
+    line-height: 1.2em;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+}
+
+
+/* form styling */
+#paper {
+	color:#2a363b;
+    font-size:20px;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+
+#margin {
+	margin-left:12px;
+	margin-bottom:20px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none; 
+}
+#text {
+	width:500px;
+	overflow:hidden;
+	background-color:#2a363b;
+	color:#222;
+	font-family:'Quicksand', sans-serif;
+	font-weight:normal;
+	font-size:24px;
+	resize:none;
+	line-height:40px;
+	padding-left:100px;
+	padding-right:100px;
+	padding-top:45px;
+	padding-bottom:34px;
+	background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+	background-repeat:repeat-y, repeat;
+	-webkit-border-radius:12px;
+	border-radius:12px;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+#title {
+	background-color:transparent;
+	border-bottom:3px solid #FFF;
+	color:#2a363b;
+	font-size:20px;
+	font-family:'Quicksand', sans-serif;
+	height:28px;
+	font-weight:bold;
+	width:220px;
+}
+#button {
+	cursor:pointer;
+	margin-top:20px;
+	float:right;
+	height:40px;
+	padding-left:24px;
+	padding-right:24px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:20px;
+	color:#FFF;
+	text-shadow: 0px -1px 0px #000000;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border-top:1px solid #FFF;
+	-webkit-box-shadow: 0px 2px 14px #000;
+	box-shadow: 0px 2px 14px #000;
+	background-color: #62add6;
+	background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+	background-repeat:repeat-x;
+}
+#button:active {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#button:focus {
+	zoom: 1;
+	filter: alpha(opacity=80);
+	opacity: 0.8;
+}
+#wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+	width:700px;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:24px;
+    margin-bottom:100px;
+    
+}
+
+@media (max-width: 800px){
+
+    #paper{
+        margin:auto ;
+        flex-basis: 1;
+        flex-shrink: 1;
+        flex-flow: column wrap;
+        box-sizing: inherit;
+        display: flex;
+    }
+
+    .player {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .btn {
+        width: 110px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+        padding: 10px !important;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 400px){
+
+    #paper{
+        margin: auto;
+        flex-basis: 1;
+        flex-shrink: 1;
+    }
+}

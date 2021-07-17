@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="./imgs/CABLogo.png" />
+    <meta name="theme-color" content="#2a363b" />
+    <meta name="description" content="A fun 4 lettered game" />
+    <link rel="apple-touch-icon" href="./imgs/CABLogo.png" />
+    <link rel="manifest" href="../manifest.json" />
+
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Saira+Stencil+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"
+        integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Rules</title>
+</head>
+
+<body>
+
+    <header>
+        <h2><a href="../index.html">Lé COWS et Lé BULLS <i class="fas fa-bullseye"></i></a></h2>
+        <nav>
+            <li><a href="../index.html">Go Back</a></li>
+            <li><a href="../feedback/feedback.html">Feedback</a></li>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <!-- <div class="background-image" style="background-image: url(./imgs/left.jpg);"></div> -->
+        <div class="header">
+            <h1>Lé COWS et Lé BULLS</h1>
+            <h2>Cowbunga!!</h3>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+        <h2>Rules </h2>
+        <hr>
+        <div class="wrap">
+
+            <ol>
+                <li>The secret word is the word that you try to guess .</li>
+                <li>You get 10 chances to guess the word .</li>
+                <li>You must enter 4 letter words only.</li>
+                <li>For each guess that you make a bulls and cows score will be given . </li>
+                <li>If the alphabets in your guess are in the correct position as that in the secret word,your bulls
+                    score will be given depending on the number of correctly placed alphabets .</li>
+                <li>It the alphabets in your guess are present in the secret word but not placed corectly ,cows score
+                    will be given accordingly .</li>
+            </ol>
+
+            <h4>For instance:</h4>
+
+            <p>
+                Secret word : cows<br>
+                Guessed word : crow<br>
+                bulls : 1 ( since only c is in the correct place in both the guessed and secret word )<br>
+                cows : 2 (since o and w are present in the secret word but not at the correct position )
+            </p>
+
+
+
+        </div>
+
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
+
+</body>
+
+</html>
